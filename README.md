@@ -29,8 +29,8 @@ run at no cost on Github hosted runners.
 
 ## Accepted shortcomings
 This is mostly a POC + some fun trend data for my own use.  As such, it's not really that 
-accurate.  The most obvious failing here is that we're doing a lookback of 6m for flights 
-even though we're running every 5m.  This will help cover some weird time boundary and 
+accurate.  The most obvious failing here is that we're doing a lookback of 16m for flights 
+even though we're running every 15m.  This will help cover some weird time boundary and 
 downtime conditions (none of the above services offer an amazing availability SLA), in 
 exchange for some data duplication (up to 2x per flight).  We could be a bit smarter here 
 and just store the last successful execution time somewhere (maybe even in GHA), but 

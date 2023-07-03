@@ -54,14 +54,14 @@ def report_to_honeycomb(flights):
 aeroapi_key = os.environ['AEROAPI_KEY']
 apiUrl = "https://aeroapi.flightaware.com/aeroapi/"
 
-sixMinAgo = timestamp_string(6)
+sixteenMinAgo = timestamp_string(16)
 now = timestamp_string()
-print('Retrieving all flights since {}'.format(sixMinAgo))
+print('Retrieving all flights since {}'.format(sixteenMinAgo))
 airport = 'KSEA'
 payload = {
     'max_pages': 2,
     'type': 'Airline',
-    'start': sixMinAgo,
+    'start': sixteenMinAgo,
     'end': now
 }
 
